@@ -1,0 +1,14 @@
+services:
+  arbitrum:
+    image: offchainlabs/arb-node:v1.2.0-9214e38
+    ports:
+      - "8547:8547"
+      - "8548:8548"
+    networks:
+      - node-interface
+    volumes:
+      - /mnt/data1/arb-node:/home/user/.arbitrum/mainnet
+
+networks:
+  node-interface: {}
+
